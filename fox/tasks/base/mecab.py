@@ -1,15 +1,10 @@
 import logging
 from typing import Optional, Union
+from MeCab import Tagger
+from fox.constants import MECAB_KO_DIC_PATH
 
 logger = logging.getLogger(__name__)
 
-try:
-    from MeCab import Tagger
-except ImportError as e:
-    logging.error("MeCab is not installed. Install the MeCab first.")
-
-MECAB_KO_DIC_PATH="/usr/local/lib/mecab/dic/mecab-ko-dic"
-    
 class KoMecabTokenizer():
     
     def __init__(self, mecab_ko_dic:str=MECAB_KO_DIC_PATH):
