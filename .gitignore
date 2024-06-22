@@ -185,6 +185,7 @@ cython_debug/
 **/data
 **/images
 **/secret
+**/conf
 
 # other
 ._.DS_Store
